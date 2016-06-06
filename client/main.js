@@ -39,7 +39,9 @@ Template.feed.rendered = function() {
 
 Template.feed.helpers({
     'media_tweets': function() {
-        return Tweets.find().fetch().filter(i => !~i.text.indexOf('RT @'));
+        return Tweets.find({}, {
+            sort: { id: -1 }
+        }).fetch().filter(i => !~i.text.indexOf('RT @'));
     }
 });
 
