@@ -3,15 +3,147 @@
 }
 
 html, body {
+    background: #222;
+    color: #eee;
+    padding: 0;
+    margin: 0;
+}
+
+// @font-face {
+//   font-family: '_interstellate_slabo';
+//   src: url('/fonts/slabo/webfont.eot');
+//   src: url('/fonts/slabo/webfont.eot?#iefix') format('embedded-opentype'),
+//        url('/fonts/slabo/webfont.woff2') format('woff2'),
+//        url('/fonts/slabo/webfont.woff') format('woff'),
+//        url('/fonts/slabo/webfont.ttf')  format('truetype'),
+//        url('/fonts/slabo/webfont.svg#svgFontName') format('svg');
+// }
+
+.Lora {
+    font-family: 'Lora', serif;
+}
+.Cormorant {
+    font-family: 'Cormorant Garamond', serif;
+}
+.Playfair {
+    font-family: 'Playfair Display', serif;
+}
+
+.fade-in-2s,
+.fade-in-2s-w05,  {
+    display: none;
+}
+
+.sc {
+    font-variant: small-caps;
+    letter-spacing: 0.095em;
+}
+
+.float-logo {
+    .Cormorant;
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+    font-size: 1.45em;
+    color: fade(rgb(255, 190, 190), 70%);
+}
+
+.story {
+    margin: 0;
+    padding: 0;
+}
+
+.page {
+    width: 100vw;
+    height: 100vh;
+    .page-container {
+        margin: 1em;
+   }
+}
+
+.bg-img-darken {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    &.demo-1 {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)), url('/img/demo1.jpg')
+    }
+    &.demo-2 {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)), url('/img/demo2.jpg')
+    }
+    &.demo-3 {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)), url('/img/demo3.jpg')
+    }
+}
+.bg-img-right {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    &.demo-1 {
+        background-image: linear-gradient(-90deg, rgba(34, 34, 34, 0.0), rgba(34, 34, 34, 1) 60%), url('/img/demo1.jpg')
+    }
+    &.demo-2 {
+        background-image: linear-gradient(-90deg, rgba(34, 34, 34, 0.0), rgba(34, 34, 34, 1) 60%), url('/img/demo2.jpg')
+    }
+    &.demo-3 {
+        background-image: linear-gradient(-90deg, rgba(34, 34, 34, 0.0), rgba(34, 34, 34, 1) 60%), url('/img/demo3.jpg')
+    }
+}
+.bg-img-left {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    &.demo-2 {
+        background-image: linear-gradient(90deg, rgba(34, 34, 34, 0.0), rgba(34, 34, 34, 1) 60%), url('/img/demo2.jpg')
+    }
+    &.demo-3 {
+        background-image: linear-gradient(90deg, rgba(34, 34, 34, 0.0), rgba(34, 34, 34, 1) 60%), url('/img/demo3.jpg')
+    }
+    &.demo-1 {
+        background-image: linear-gradient(90deg, rgba(34, 34, 34, 0.0), rgba(34, 34, 34, 1) 60%), url('/img/demo1.jpg')
+    }
+}
+
+.bg-black {
     background: black;
-    color: #dedede;
+    color: #ccc;
+
+    .title {
+        color: white;
+    }
 }
 
-.brand-logo {
-    font-family: 'Slabo 27px', serif;
+.bg-dark-gray {
+    background: #1f1f1f;
 }
 
-footer {
-    padding: 1em;
-    text-align: center;
+
+.story {
+    .title {
+        .Lora;
+        font-size: 4em;
+    }
+
+    .subtitle {
+        .Cormorant;
+        font-size: 1.8em;
+        .sc;
+        letter-spacing: 0.04em;
+    }
+
+    p {
+        font-size: 1.54em;
+        line-height: 1.45em;
+        text-align: justify;
+        .Playfair;
+    }
+}
+
+.left-fill-70 {
+    width: 70%;
+}
+
+.right-fill-70 {
+    width: 60%;
+    margin-left: 30%;
 }
